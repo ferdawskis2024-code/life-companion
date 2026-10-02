@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Life Companion</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>What do you want to become?</h1>
+        <h1>What do you want to become?</h1>
 
-    <p>
-        Tell me about the person you want to become
-        and the life you want to build.
-    </p>
+        <p>
+            Tell me about the person you want to become
+            and the life you want to build.
+        </p>
 
-    <textarea
-        id="dream"
-        placeholder="I want to become..."
-    ></textarea>
+        <textarea
+            id="dream"
+            placeholder="I want to become..."
+        ></textarea>
 
-    <br>
+        <br>
 
-    <button onclick="continueJourney()">
-        Continue
-    </button>
+        <button onclick="continueJourney()">
+            Continue
+        </button>
 
-    <p id="response"></p>
+        <p id="response"></p>
 
-</div>
+    </div>
+
+    <script>
+        function continueJourney() {
+            const dream = document.getElementById("dream").value;
+
+            document.getElementById("response").innerText =
+                "I understand. Let's build your path.";
+        }
+    </script>
+
+</body>
 </html>
