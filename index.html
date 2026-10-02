@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Companion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="container">
 
     <h1>What do you want to become?</h1>
 
@@ -20,7 +23,7 @@
         placeholder="I want to become..."
     ></textarea>
 
-    <br><br>
+    <br>
 
     <button onclick="continueJourney()">
         Continue
@@ -28,14 +31,5 @@
 
     <p id="response"></p>
 
-    <script>
-        function continueJourney() {
-            const dream = document.getElementById("dream").value;
-
-            document.getElementById("response").innerText =
-                "I understand. Let's build your path.";
-        }
-    </script>
-
-</body>
+</div>
 </html>
