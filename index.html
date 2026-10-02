@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Companion</title>
+</head>
+
+<body>
+
+    <h1>What do you want to become?</h1>
+
+    <p>
+        Tell me about the person you want to become
+        and the life you want to build.
+    </p>
+
+    <textarea
+        id="dream"
+        placeholder="I want to become..."
+    ></textarea>
+
+    <br><br>
+
+    <button onclick="continueJourney()">
+        Continue
+    </button>
+
+    <p id="response"></p>
+
+    <script>
+        function continueJourney() {
+            const dream = document.getElementById("dream").value;
+
+            document.getElementById("response").innerText =
+                "I understand. Let's build your path.";
+        }
+    </script>
+
+</body>
+</html>
