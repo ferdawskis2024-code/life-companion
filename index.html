@@ -35,14 +35,22 @@
 
     </div>
 
-    <script>
-        function continueJourney() {
-            const dream = document.getElementById("dream").value;
+<script>
+    function continueJourney() {
+        const dream = document.getElementById("dream").value.trim();
 
+        if (dream === "") {
             document.getElementById("response").innerText =
-                "I understand. Let's build your path.";
+                "Tell me what you want to become first.";
+            return;
         }
-    </script>
+
+        localStorage.setItem("userDream", dream);
+
+        document.getElementById("response").innerText =
+            "I understand. Let's build your path.";
+    }
+</script>
 
 </body>
 </html>
